@@ -1,0 +1,27 @@
+{
+    "result":[
+       {
+          "id":"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+          "zone_id":"b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1",
+          "zone_name":"mydomain",
+          "name":"mydomain",
+          "type":"A",
+          "content":"0.0.0.0",
+          "proxied": false,
+          "comment": "comment",
+          "tags": [],
+          "ttl": 1
+
+       }
+    ],
+    "success":true,
+    "errors":[],
+    "messages":[],
+    "result_info":{
+       "page":1,
+       "per_page":100,
+       "count":6,
+       "total_count":6,
+       "total_pages":1
+    }
+ }

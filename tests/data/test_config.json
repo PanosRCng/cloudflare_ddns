@@ -1,0 +1,9 @@
+{
+    "test": {
+        "string": ["TEST_STRING", "a string"],
+        "number": ["TEST_NUMBER", "100"],
+        "boolean": ["TEST_BOOLEAN", true],
+        "list_of_strings": ["TEST_LIST_OF_STRINGS", "['string1']"]
+    }
+}
+  

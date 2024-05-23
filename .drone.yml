@@ -1,0 +1,67 @@
+---
+kind: pipeline
+type: docker
+name: commit_lint
+
+steps:
+
+- name: commit lint
+  image: extenda/commitlint
+  commands:
+  - commitlint --from=HEAD~1
+
+
+---
+kind: pipeline
+type: docker
+name: test_build_publish_pipeline
+
+platform:
+  arch: amd64
+
+steps:
+
+- name: test
+  image: python:3.6.9-slim-buster
+  commands:
+  - pip install -r requirements.txt
+  - pip install pytest
+  - pytest -rA tests/
+
+- name: build
+  image: plugins/docker
+  settings:
+    insecure: true
+    registry: 101.0.0.1:5002
+    repo: 101.0.0.1:5002/test/cloudflare_ddns
+    tags: latest
+
+depends_on:
+- commit_lint
+
+
+---
+kind: pipeline
+name: deploy_pipeline
+
+workspace:
+  path: /home/user/projects/cloudflare_ddns
+
+steps:
+- name: run_local
+  image: docker
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - docker pull 101.0.0.1:5002/test/cloudflare_ddns
+  - if (docker ps -a | grep cloudflare_ddns); then docker stop cloudflare_ddns; fi
+  - docker run -d --rm -v `pwd`/envs:/usr/src/app/envs/:ro -v `pwd`/logs:/usr/src/app/logs/:rw --user $(id -u ${USER}):$(id -g ${USER}) --name cloudflare_ddns 101.0.0.1:5002/test/cloudflare_ddns
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
+
+depends_on:
+- test_build_publish_pipeline

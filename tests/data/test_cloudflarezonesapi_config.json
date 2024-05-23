@@ -1,0 +1,8 @@
+{
+  "cloudflare_zones_api": {
+    "base_url": ["CLOUDFLARE_ZONES_API_BASE_URL", "https://api.cloudflare.com/client"],
+    "version": ["CLOUDFLARE_ZONES_API_VERSION", "v4"],
+    "api_token": ["CLOUDFLARE_ZONES_API_TOKEN", ""],
+    "request_timeout": ["CLOUDFLARE_ZONES_API_REQUEST_TIMEOUT", 10]
+  }
+}

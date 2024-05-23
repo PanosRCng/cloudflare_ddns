@@ -1,0 +1,7 @@
+{
+    "dns_record": {
+      "name": ["DNS_RECORD_NAME", "mydomain"],
+      "type": ["DNS_RECORD_TYPE", "A"],
+      "zone_name": ["DNS_RECORD_ZONE_NAME", "mydomain"]
+    }
+  }

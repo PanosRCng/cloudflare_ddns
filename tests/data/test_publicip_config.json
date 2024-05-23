@@ -1,0 +1,8 @@
+{
+    "public_ip": {
+        "urls": ["PUBLIC_IP_URLS", "['https://test_publicip_api_url']"],
+        "refresh_every_n_requests" : ["PUBLIC_IP_REFRESH_EVERY_N_REQUESTS", 1],
+        "refresh_every_n_seconds" : ["PUBLIC_IP_REFRESH_EVERY_N_SECONDS", 1800],
+        "request_timeout": ["PUBLIC_IP_REQUEST_TIMEOUT", 10]
+    }
+}

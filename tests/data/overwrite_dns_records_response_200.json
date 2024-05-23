@@ -1,0 +1,17 @@
+{
+    "result":{
+       "id":"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+       "zone_id":"b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1",
+       "zone_name":"mydomain",
+       "name":"mydomain",
+       "type":"A",
+       "content":"0.0.0.0"
+    },
+    "success":true,
+    "errors":[
+       
+    ],
+    "messages":[
+       
+    ]
+ }

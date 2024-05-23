@@ -1,0 +1,14 @@
+{
+  "email": {
+    "smtp": {
+      "host": ["EMAIL_SMTP_HOST", "test_host"],
+      "port": ["EMAIL_SMTP_PORT", 25],
+      "timeout": ["EMAIL_SMTP_TIMEOUT", 10]
+    },
+    "from": ["EMAIL_FROM", "cloudflare_ddns"],
+    "recipients": {
+      "admin": ["EMAIL_RECIPIENTS_ADMIN", "['admin@testmail.com']"],
+      "content": ["EMAIL_RECIPIENTS_CONTENT", "['dev@testmail.com']"]
+    }
+  }
+}

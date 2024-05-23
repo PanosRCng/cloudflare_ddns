@@ -1,0 +1,4 @@
+TEST_STRING=a string from env
+TEST_NUMBER=200
+TEST_BOOLEAN=false
+TEST_LIST_OF_STRINGS=['string1', 'string2', 'string3']

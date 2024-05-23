@@ -1,0 +1,20 @@
+{
+    "result":[
+       {
+          "id":"b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1",
+          "name":"mydomain"
+       }
+    ],
+    "result_info":{
+       "page":1,
+       "per_page":20,
+       "total_pages":1,
+       "count":1,
+       "total_count":1
+    },
+    "success":true,
+    "errors":[
+       
+    ],
+    "messages":[]
+ }

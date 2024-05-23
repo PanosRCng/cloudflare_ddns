@@ -1,0 +1,39 @@
+{
+  "dns_record": {
+    "name": ["DNS_RECORD_NAME", "mydomain"],
+    "type": ["DNS_RECORD_TYPE", "A"],
+    "zone_name": ["DNS_RECORD_ZONE_NAME", "mydomain"]
+  },
+  "cloudflare_zones_api": {
+    "base_url": ["CLOUDFLARE_ZONES_API_BASE_URL", "https://api.cloudflare.com/client"],
+    "version": ["CLOUDFLARE_ZONES_API_VERSION", "v4"],
+    "api_token": ["CLOUDFLARE_ZONES_API_TOKEN", ""],
+    "request_timeout": ["CLOUDFLARE_ZONES_API_REQUEST_TIMEOUT", 10]
+  },
+  "public_ip": {
+    "urls": ["PUBLIC_IP_URLS", "['https://api.ipify.org/', 'http://ip.42.pl/raw']"],
+    "refresh_every_n_requests" : ["PUBLIC_IP_REFRESH_EVERY_N_REQUESTS", 1],
+    "refresh_every_n_seconds" : ["PUBLIC_IP_REFRESH_EVERY_N_SECONDS", 1800],
+    "request_timeout": ["PUBLIC_IP_REQUEST_TIMEOUT", 10]
+  },
+  "email": {
+    "smtp": {
+      "host": ["EMAIL_SMTP_HOST", "127.0.0.1"],
+      "port": ["EMAIL_SMTP_PORT", 25],
+      "timeout": ["EMAIL_SMTP_TIMEOUT", 10]
+    },
+    "from": ["EMAIL_FROM", "cloudflare_ddns"],
+    "recipients": {
+      "admin": ["EMAIL_RECIPIENTS_ADMIN", "['admin@testmail.com']"],
+      "content": ["EMAIL_RECIPIENTS_CONTENT", "['dev@testmail.com']"]
+    }
+  },
+  "LOGS": {
+    "log_level": ["LOGS_LOG_LEVEL", "info"],
+    "directory": ["LOGS_DIRECTORY", "logs"],
+    "max_size_MB": ["LOGS_MAX_SIZE_MB", "50"],
+    "logfile_enabled": ["LOGS_LOGFILE_ENABLED", false],
+    "email_enabled": ["LOGS_EMAIL_ENABLED", false],
+    "json_format_enabled": ["LOGS_JSON_FORMAT_ENABLED", false]
+  }
+}
